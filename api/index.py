@@ -5,7 +5,7 @@ import random
 import json
 from datetime import datetime
 import os  # For env vars if needed
-
+import logging
 # Vercel serverless wrapper
 from mangum import Mangum  # Install: pip install mangum
 
@@ -57,6 +57,10 @@ async def make_payment(booking_id: str, amount: float):
 @app.get("/")
 async def root():
     return {"msg": "Server up! POST to /tools/{name}."}
+
+
+logging.basicConfig(level=logging.DEBUG)
+print("App startup: Imports successful")  # Logs to Vercel console
 
 # Vercel handler: Wraps FastAPI for serverless
 handler = Mangum(app)

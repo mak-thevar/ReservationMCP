@@ -1,0 +1,29 @@
+{
+  "name": "reservationmcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mak-thevar/ReservationMCP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mak-thevar/ReservationMCP/issues"
+  },
+  "homepage": "https://github.com/mak-thevar/ReservationMCP#readme",
+  "dependencies": {
+    "mcp-handler": "^1.0.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "typescript": "^5.9.3"
+  }
+}

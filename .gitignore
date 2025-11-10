@@ -41,3 +41,5 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 .vscode/
+
+/old.backup

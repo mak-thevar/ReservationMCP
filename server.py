@@ -357,4 +357,17 @@ Use book_table to reserve your preferred time.
 
 
 if __name__ == "__main__":
-    mcp.run()
+    port = int(os.getenv("PORT", 8080))
+    logger.info(f"Starting MCP server on port {port}")
+    
+    # Run with SSE transport for web hosting
+    mcp.run(transport="sse", host="0.0.0.0", port=port)
+    #import sys
+    
+    # Detect environment
+    #if sys.stdin.isatty():
+        # Running in terminal/cloud - use HTTP
+    mcp.run(transport="sse", port=8080)
+    # else:
+    #     # Running with Claude Desktop - use STDIO
+    #     mcp.run(transport="stdio")
